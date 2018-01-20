@@ -1,6 +1,7 @@
-package server;
-
 import java.util.ArrayList;
+
+import GameLogic.BoardLogic;
+
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;

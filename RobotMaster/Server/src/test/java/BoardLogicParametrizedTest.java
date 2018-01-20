@@ -1,7 +1,7 @@
-package server;
-
 import java.util.Arrays;
-import java.util.Collection;
+import java.util.List;
+
+import GameLogic.BoardLogic;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -19,9 +19,9 @@ public class BoardLogicParametrizedTest {
       this.firstValue = firstValue;
       this.secondValue = secondValue;
    }
-   
+
    @Parameters
-   public static Collection<Object[]> params() {
+   public static List<Integer[]> params() {
        return Arrays.asList(
                //4 values out of bounds for the 5x5 board
                new Integer[] {-1, 0},
@@ -30,7 +30,6 @@ public class BoardLogicParametrizedTest {
                new Integer[] {0,5}
            );
    }
-   
    @Before
    public void setUp() {
       board = new BoardLogic(false);
